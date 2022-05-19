@@ -1,0 +1,38 @@
+body{
+    font-family: 'Grechen Fuemen', cursive;
+}
+
+.nav-link{
+color: white;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 0;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .job{
+    font-size: 4rem;
+    color: #F8DC81;
+  }
+  /* Style the button used to pause/play the video */
+  
+  .mybtn{
+      font-size: 24px;
+  }
+
+  .mybtn:hover{
+      background-color: #AF0069;
+      border: #AF0069;
+  }
