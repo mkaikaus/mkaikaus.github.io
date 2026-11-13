@@ -59,7 +59,7 @@ I am a graduate student in Electrical and Computer Engineering at the University
 ## Contact
 
 - Email: [maleehakaikaus.official@gmail.com](mailto:maleehakaikaus.official@gmail.com)
-- LinkedIn: [maleeha-kaikaus](https://www.linkedin.com/in/maleeha-kaikaus-201764191/)
+- LinkedIn: [maleeha-kaikaus](https://www.linkedin.com/in/maleeha-kaikaus/)
 - GitHub: [@mkaikaus](https://github.com/mkaikaus)
 
 ---
