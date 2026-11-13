@@ -756,35 +756,75 @@
         </div>
       </section>
 
-        <section class="sec" id="contact" data-tone="inv" style="padding-bottom:0">
-    <h2 class="kin" data-dir="-1" data-i18n="k_contact">Let's work <i>together</i></h2>
-    <div class="wrap contact">
-      <div>
-        <p class="where rv" data-i18n="where">Based in Victoria, BC, Canada.</p>
-        <a class="mail rv" href="mailto:maleehakaikaus.official@gmail.com">maleehakaikaus.official@gmail.com</a>
-        <div class="soc rv">
-          <a href="https://www.linkedin.com/in/maleeha-kaikaus">LinkedIn &nearr;</a>
-          <a href="https://github.com/mkaikaus">GitHub &nearr;</a>
+        <section class="sec" id="about" data-tone="base">
+        <h2 class="kin" data-dir="1" data-i18n="k_about">About <i>me</i></h2>
+        <div class="wrap two">
+          <div class="about">
+            <h3 class="rise" data-i18n="ab_h">Engineer, student, teacher.</h3>
+            <p class="rv" data-i18n="ab_p1">
+              I am a
+              <strong
+                >MASc student in Electrical and Computer Engineering</strong
+              >
+              at the University of Victoria. I am drawn to privacy and security,
+              and I am still choosing my exact research area. My work so far
+              spans hardware, software and machine learning.
+            </p>
+            <p class="rv" data-i18n="ab_p2">
+              Before moving to Victoria, I worked as a software engineer in
+              Dhaka and published two papers on deep learning. Now I also teach
+              digital design labs to undergraduates.
+            </p>
+            <p class="rv">
+              <span data-i18n="ab_course">Current coursework:</span><br /><span
+                class="course"
+                >ECE 503 &middot; Optimization for Machine Learning</span
+              ><span class="course">ECE 515 &middot; Information Theory</span>
+            </p>
+          </div>
+          <div>
+            <p class="tag rv" data-i18n="ed_tag">Education</p>
+            <div class="tl" id="tl">
+              <i class="tl-line" id="tlLine"></i>
+              <div class="rv">
+                <time data-i18n="e1_time"
+                  >Sept 2026 &ndash; Aug 2028 (expected)</time
+                >
+                <h3 data-i18n="e1_h">
+                  Master of Applied Science, Electrical and Computer Engineering
+                </h3>
+                <p>University of Victoria &middot; Victoria, BC</p>
+              </div>
+              <div class="rv" style="--d: 120ms">
+                <time data-i18n="e2_time">Feb 2018 &ndash; Mar 2023</time>
+                <h3 data-i18n="e2_h">
+                  Bachelor of Science in Information Technology
+                </h3>
+                <p>Jahangirnagar University &middot; Dhaka, Bangladesh</p>
+                <p data-i18n="e2_p">
+                  Government Merit Scholarship for academic excellence, awarded
+                  all four undergraduate years.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <form id="form" class="rv" action="https://api.web3forms.com/submit" method="POST">
-        <!-- Web3Forms access key: paste it between the quotes of value="" -->
-        <input type="hidden" name="access_key" value="9e4e77fc-8706-490f-b51f-5dc0b5a4e664">
-        <input type="hidden" name="subject" value="New message from mkaikaus.github.io">
-        <!-- spam trap: people never see this box, bots tick it -->
-        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
-        <div><label for="email" data-i18n="f_email">Your email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-        <div><label for="msg" data-i18n="f_msg">Message</label><textarea id="msg" name="message" data-i18n-ph="f_ph" placeholder="Tell me about your project or question" required></textarea></div>
-        <button class="btn solid mag" type="submit" style="justify-content:center" data-i18n="f_send">Send message</button>
-        <p class="note" id="note" role="status"></p>
-      </form>
-    </div>
-    <div class="sig" id="sig" aria-hidden="true"><span>Maleeha Kaikaus</span></div>
-    <footer class="wrap">
-      <span>&copy; 2026 Maleeha Kaikaus</span>
-      <a href="#home" data-i18n="top">Back to top &uarr;</a>
-    </footer>
-  </section>
+        <div class="wrap">
+          <div class="resume rv" id="resume">
+            <div>
+              <p class="tag" data-i18n="rs_tag">Resume</p>
+              <h3 data-i18n="rs_h">The full story, in one PDF.</h3>
+            </div>
+            <a
+              class="btn mag"
+              href="media/Maleeha_Kaikaus_Resume.pdf"
+              data-i18n="rs_btn"
+              >Open resume (PDF)</a
+            >
+          </div>
+        </div>
+      </section>
+      
     </main>
 
     <!-- three.js (vendor/three.min.js) is loaded by js/main.js after the first paint -->
