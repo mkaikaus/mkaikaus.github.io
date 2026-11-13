@@ -756,7 +756,7 @@
         </div>
       </section>
 
-        <section class="sec" id="about" data-tone="base">
+      <section class="sec" id="about" data-tone="base">
         <h2 class="kin" data-dir="1" data-i18n="k_about">About <i>me</i></h2>
         <div class="wrap two">
           <div class="about">
@@ -824,7 +824,97 @@
           </div>
         </div>
       </section>
-      
+
+      <section
+        class="sec"
+        id="contact"
+        data-tone="inv"
+        style="padding-bottom: 0"
+      >
+        <h2 class="kin" data-dir="-1" data-i18n="k_contact">
+          Let's work <i>together</i>
+        </h2>
+        <div class="wrap contact">
+          <div>
+            <p class="where rv" data-i18n="where">
+              Based in Victoria, BC, Canada.
+            </p>
+            <a class="mail rv" href="mailto:maleehakaikaus.official@gmail.com"
+              >maleehakaikaus.official@gmail.com</a
+            >
+            <div class="soc rv">
+              <a href="https://www.linkedin.com/in/maleeha-kaikaus"
+                >LinkedIn &nearr;</a
+              >
+              <a href="https://github.com/mkaikaus">GitHub &nearr;</a>
+            </div>
+          </div>
+          <form
+            id="form"
+            class="rv"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <!-- Web3Forms access key: paste it between the quotes of value="" -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="9e4e77fc-8706-490f-b51f-5dc0b5a4e664"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New message from mkaikaus.github.io"
+            />
+            <!-- spam trap: people never see this box, bots tick it -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+              hidden
+            />
+            <div>
+              <label for="email" data-i18n="f_email">Your email</label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="msg" data-i18n="f_msg">Message</label
+              ><textarea
+                id="msg"
+                name="message"
+                data-i18n-ph="f_ph"
+                placeholder="Tell me about your project or question"
+                required
+              ></textarea>
+            </div>
+            <button
+              class="btn solid mag"
+              type="submit"
+              style="justify-content: center"
+              data-i18n="f_send"
+            >
+              Send message
+            </button>
+            <p class="note" id="note" role="status"></p>
+          </form>
+        </div>
+        <div class="sig" id="sig" aria-hidden="true">
+          <span>Maleeha Kaikaus</span>
+        </div>
+        <footer class="wrap">
+          <span>&copy; 2026 Maleeha Kaikaus</span>
+          <a href="#home" data-i18n="top">Back to top &uarr;</a>
+        </footer>
+      </section>
     </main>
 
     <!-- three.js (vendor/three.min.js) is loaded by js/main.js after the first paint -->
