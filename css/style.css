@@ -1,0 +1,48 @@
+@property --ink{syntax:'<color>';inherits:true;initial-value:#e8e8e8}
+@property --panel{syntax:'<color>';inherits:true;initial-value:#ffffff}
+@property --line{syntax:'<color>';inherits:true;initial-value:rgba(48,71,94,.18)}
+@property --text{syntax:'<color>';inherits:true;initial-value:#30475e}
+@property --head{syntax:'<color>';inherits:true;initial-value:#1b2a3a}
+@property --muted{syntax:'<color>';inherits:true;initial-value:#5d6875}
+@property --accent{syntax:'<color>';inherits:true;initial-value:#ee5a5a}
+@property --accent-ink{syntax:'<color>';inherits:true;initial-value:#bd3338}
+@property --on-accent{syntax:'<color>';inherits:true;initial-value:#ffffff}
+:root{
+  --ink:#e8e8e8;--panel:#ffffff;--line:rgba(48,71,94,.18);--text:#30475e;--head:#1b2a3a;--muted:#5d6875;
+  --accent:#ee5a5a;--accent-ink:#bd3338;--on-accent:#ffffff;
+  --display:'Montserrat','Segoe UI',system-ui,sans-serif;
+  --body:'Merriweather',Georgia,serif;
+  --script:'Sacramento','Brush Script MT',cursive;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  color-scheme:light;
+  transition:--ink .7s ease,--panel .7s ease,--line .7s ease,--text .7s ease,--head .7s ease,--muted .7s ease,--accent .7s ease,--accent-ink .7s ease,--on-accent .7s ease;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]):not([data-pal]){--ink:#000000;--panel:#141414;--line:rgba(255,255,255,.14);--text:#d3d8dd;--head:#ffffff;--muted:#a1a6ab;--accent:#f26b6b;--accent-ink:#ff8f8f;--on-accent:#0a0a0a;color-scheme:dark}
+}
+:root[data-theme="dark"]:not([data-pal]){--ink:#000000;--panel:#141414;--line:rgba(255,255,255,.14);--text:#d3d8dd;--head:#ffffff;--muted:#a1a6ab;--accent:#f26b6b;--accent-ink:#ff8f8f;--on-accent:#0a0a0a;color-scheme:dark}
+:root[data-pal="dark"]{--ink:#000000;--panel:#141414;--line:rgba(255,255,255,.14);--text:#d3d8dd;--head:#ffffff;--muted:#a1a6ab;--accent:#f26b6b;--accent-ink:#ff8f8f;--on-accent:#0a0a0a;color-scheme:dark}
+
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.75;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+#scene{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;pointer-events:none}
+main{position:relative;z-index:2}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+
+
+/* preloader */
+.pre{display:none}
+.js .pre{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#ee5a5a;color:#fff;clip-path:inset(0 0 0 0);transition:clip-path .9s cubic-bezier(.7,0,.2,1);animation:preSafe 0s 6s forwards}
+.js.loaded .pre{clip-path:inset(0 0 100% 0);pointer-events:none}
+@keyframes preSafe{to{visibility:hidden}}
+.pre-name{font-family:var(--script);font-size:clamp(3.4rem,11vw,8rem);line-height:1;animation:preIn 1.2s var(--ease) both}
+@keyframes preIn{from{clip-path:inset(-20% 100% -20% 0)}to{clip-path:inset(-20% -5% -20% 0)}}
+.pre-n{position:absolute;right:24px;bottom:18px;font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8vw,6rem);line-height:1;font-variant-numeric:tabular-nums}
+.pre-bar{position:absolute;left:0;bottom:0;height:5px;width:100%;background:#fff;transform:scaleX(0);transform-origin:left}
