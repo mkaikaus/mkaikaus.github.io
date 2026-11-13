@@ -45,7 +45,62 @@ window.addEventListener('error',function(){var r=document.documentElement;r.clas
 <div class="prog" id="prog" aria-hidden="true"></div>
 <div class="ring" id="ring" aria-hidden="true"></div>
 
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#home" aria-label="Maleeha Kaikaus, home">mk<b>.</b></a>
+    <div class="ctl">
+      <button type="button" id="langBtn" aria-label="Passer en français">FR</button>
+      <button type="button" id="themeBtn" aria-label="Switch to dark theme">
+        <svg id="icoMoon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        <svg id="icoSun" viewBox="0 0 24 24" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
+      </button>
+      <button type="button" id="menuBtn" aria-expanded="false" aria-controls="menu"><span class="lbl" id="menuLbl">Menu</span><span class="burger"><i></i><i></i></span></button>
+    </div>
+  </div>
+</header>
 
+<div class="menu" id="menu" inert>
+  <nav class="wrap" aria-label="Main">
+    <ol>
+      <li><a href="#home" style="--n:0"><small>01</small><span data-i18n="nav_home">Home</span></a></li>
+      <li><a href="#projects" style="--n:1"><small>02</small><span data-i18n="nav_projects">Projects</span></a></li>
+      <li><a href="#experience" style="--n:2"><small>03</small><span data-i18n="nav_experience">Experience</span></a></li>
+      <li><a href="#skills" style="--n:3"><small>04</small><span data-i18n="nav_skills">Skills</span></a></li>
+      <li><a href="#research" style="--n:4"><small>05</small><span data-i18n="nav_research">Publications</span></a></li>
+      <li><a href="#about" style="--n:5"><small>06</small><span data-i18n="nav_about">About</span></a></li>
+      <li><a href="#contact" style="--n:6"><small>07</small><span data-i18n="nav_contact">Contact</span></a></li>
+    </ol>
+    <div class="menu-foot">
+      <a href="mailto:maleehakaikaus.official@gmail.com">maleehakaikaus.official@gmail.com</a>
+      <a href="https://www.linkedin.com/in/maleeha-kaikaus">LinkedIn</a>
+      <a href="https://github.com/mkaikaus">GitHub</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <section class="hero" id="home" data-tone="base">
+    <div class="hero-stage" id="stage">
+      <div class="hero-in">
+        <div class="wrap">
+          <p class="eyebrow"><span data-i18n="hello">Hello, I am</span><span><span data-i18n="scroll">Scroll to explore</span> <b>&darr;</b></span></p>
+          <h1 id="name" aria-label="Maleeha Kaikaus"><span class="first" aria-hidden="true">Maleeha</span><span class="last" aria-hidden="true">Kaikaus</span></h1>
+          <div class="hero-foot">
+            <div>
+              <p class="role"><span class="role-txt"></span><i class="caret"></i></p>
+              <p class="sub" data-i18n="hero_sub">Electrical and Computer Engineering &middot; University of Victoria &middot; Victoria, BC</p>
+            </div>
+            <div class="cta">
+              <a class="btn solid mag" href="#projects" data-i18n="cta_projects">See my projects &darr;</a>
+              <a class="btn ghost mag" href="#contact" data-i18n="cta_contact">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 
   <!-- three.js (vendor/three.min.js) is loaded by js/main.js after the first paint -->
