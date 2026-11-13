@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#ee5a5a"/>
+  <text x="30" y="43" text-anchor="middle" font-family="Montserrat,'Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-weight="800" font-size="30" letter-spacing="-1.5" fill="#fff">mk</text>
+  <circle cx="54" cy="40" r="3.4" fill="#fff"/>
+</svg>
