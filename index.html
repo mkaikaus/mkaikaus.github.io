@@ -1,174 +1,593 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maleeha Kaikaus Portfolio</title>
+    <meta
+      name="description"
+      content="Maleeha Kaikaus is a MASc student in Electrical and Computer Engineering at the University of Victoria. Projects, experience, published research and contact."
+    />
+    <link rel="canonical" href="https://mkaikaus.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Maleeha Kaikaus" />
+    <meta property="og:title" content="Maleeha Kaikaus Portfolio" />
+    <meta
+      property="og:description"
+      content="Maleeha Kaikaus is a MASc student in Electrical and Computer Engineering at the University of Victoria. Projects, experience, published research and contact."
+    />
+    <meta property="og:url" content="https://mkaikaus.github.io/" />
+    <meta
+      property="og:image"
+      content="https://mkaikaus.github.io/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Maleeha Kaikaus, written in white on coral"
+    />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:locale:alternate" content="fr_CA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maleeha Kaikaus Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Maleeha Kaikaus is a MASc student in Electrical and Computer Engineering at the University of Victoria. Projects, experience, published research and contact."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mkaikaus.github.io/og-image.png"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script>
+      document.documentElement.classList.add("js");
+      window.addEventListener("error", function () {
+        var r = document.documentElement;
+        r.classList.remove("anim");
+        r.classList.add("loaded");
+      });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,500;0,700;0,800;1,500&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maleeha Kaikaus Portfolio</title>
-<meta name="description" content="Maleeha Kaikaus is a MASc student in Electrical and Computer Engineering at the University of Victoria. Projects, experience, published research and contact.">
-<link rel="canonical" href="https://mkaikaus.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Maleeha Kaikaus">
-<meta property="og:title" content="Maleeha Kaikaus Portfolio">
-<meta property="og:description" content="Maleeha Kaikaus is a MASc student in Electrical and Computer Engineering at the University of Victoria. Projects, experience, published research and contact.">
-<meta property="og:url" content="https://mkaikaus.github.io/">
-<meta property="og:image" content="https://mkaikaus.github.io/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Maleeha Kaikaus, written in white on coral">
-<meta property="og:locale" content="en_CA">
-<meta property="og:locale:alternate" content="fr_CA">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Maleeha Kaikaus Portfolio">
-<meta name="twitter:description" content="Maleeha Kaikaus is a MASc student in Electrical and Computer Engineering at the University of Victoria. Projects, experience, published research and contact.">
-<meta name="twitter:image" content="https://mkaikaus.github.io/og-image.png">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon.png" type="image/png" sizes="48x48">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<script>
-document.documentElement.classList.add('js');
-window.addEventListener('error',function(){var r=document.documentElement;r.classList.remove('anim');r.classList.add('loaded');});
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,500;0,700;0,800;1,500&family=Sacramento&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <div class="pre" id="pre" aria-hidden="true">
-  <div class="pre-name">Maleeha Kaikaus</div>
-  <div class="pre-n" id="preN">000</div>
-  <div class="pre-bar" id="preBar"></div>
-</div>
-<canvas id="scene" aria-hidden="true"></canvas>
-<div class="prog" id="prog" aria-hidden="true"></div>
-<div class="ring" id="ring" aria-hidden="true"></div>
-
-<header>
-  <div class="wrap bar">
-    <a class="logo" href="#home" aria-label="Maleeha Kaikaus, home">mk<b>.</b></a>
-    <div class="ctl">
-      <button type="button" id="langBtn" aria-label="Passer en français">FR</button>
-      <button type="button" id="themeBtn" aria-label="Switch to dark theme">
-        <svg id="icoMoon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
-        <svg id="icoSun" viewBox="0 0 24 24" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
-      </button>
-      <button type="button" id="menuBtn" aria-expanded="false" aria-controls="menu"><span class="lbl" id="menuLbl">Menu</span><span class="burger"><i></i><i></i></span></button>
+  <body>
+    <div class="pre" id="pre" aria-hidden="true">
+      <div class="pre-name">Maleeha Kaikaus</div>
+      <div class="pre-n" id="preN">000</div>
+      <div class="pre-bar" id="preBar"></div>
     </div>
-  </div>
-</header>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="prog" id="prog" aria-hidden="true"></div>
+    <div class="ring" id="ring" aria-hidden="true"></div>
 
-<div class="menu" id="menu" inert>
-  <nav class="wrap" aria-label="Main">
-    <ol>
-      <li><a href="#home" style="--n:0"><small>01</small><span data-i18n="nav_home">Home</span></a></li>
-      <li><a href="#projects" style="--n:1"><small>02</small><span data-i18n="nav_projects">Projects</span></a></li>
-      <li><a href="#experience" style="--n:2"><small>03</small><span data-i18n="nav_experience">Experience</span></a></li>
-      <li><a href="#skills" style="--n:3"><small>04</small><span data-i18n="nav_skills">Skills</span></a></li>
-      <li><a href="#research" style="--n:4"><small>05</small><span data-i18n="nav_research">Publications</span></a></li>
-      <li><a href="#about" style="--n:5"><small>06</small><span data-i18n="nav_about">About</span></a></li>
-      <li><a href="#contact" style="--n:6"><small>07</small><span data-i18n="nav_contact">Contact</span></a></li>
-    </ol>
-    <div class="menu-foot">
-      <a href="mailto:maleehakaikaus.official@gmail.com">maleehakaikaus.official@gmail.com</a>
-      <a href="https://www.linkedin.com/in/maleeha-kaikaus">LinkedIn</a>
-      <a href="https://github.com/mkaikaus">GitHub</a>
+    <header>
+      <div class="wrap bar">
+        <a class="logo" href="#home" aria-label="Maleeha Kaikaus, home"
+          >mk<b>.</b></a
+        >
+        <div class="ctl">
+          <button type="button" id="langBtn" aria-label="Passer en français">
+            FR
+          </button>
+          <button type="button" id="themeBtn" aria-label="Switch to dark theme">
+            <svg id="icoMoon" viewBox="0 0 24 24">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+            </svg>
+            <svg id="icoSun" viewBox="0 0 24 24" hidden>
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            id="menuBtn"
+            aria-expanded="false"
+            aria-controls="menu"
+          >
+            <span class="lbl" id="menuLbl">Menu</span
+            ><span class="burger"><i></i><i></i></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu" id="menu" inert>
+      <nav class="wrap" aria-label="Main">
+        <ol>
+          <li>
+            <a href="#home" style="--n: 0"
+              ><small>01</small><span data-i18n="nav_home">Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#projects" style="--n: 1"
+              ><small>02</small
+              ><span data-i18n="nav_projects">Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="#experience" style="--n: 2"
+              ><small>03</small
+              ><span data-i18n="nav_experience">Experience</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills" style="--n: 3"
+              ><small>04</small><span data-i18n="nav_skills">Skills</span></a
+            >
+          </li>
+          <li>
+            <a href="#research" style="--n: 4"
+              ><small>05</small
+              ><span data-i18n="nav_research">Publications</span></a
+            >
+          </li>
+          <li>
+            <a href="#about" style="--n: 5"
+              ><small>06</small><span data-i18n="nav_about">About</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact" style="--n: 6"
+              ><small>07</small><span data-i18n="nav_contact">Contact</span></a
+            >
+          </li>
+        </ol>
+        <div class="menu-foot">
+          <a href="mailto:maleehakaikaus.official@gmail.com"
+            >maleehakaikaus.official@gmail.com</a
+          >
+          <a href="https://www.linkedin.com/in/maleeha-kaikaus">LinkedIn</a>
+          <a href="https://github.com/mkaikaus">GitHub</a>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
 
-<main>
-  <section class="hero" id="home" data-tone="base">
-    <div class="hero-stage" id="stage">
-      <div class="hero-in">
-        <div class="wrap">
-          <p class="eyebrow"><span data-i18n="hello">Hello, I am</span><span><span data-i18n="scroll">Scroll to explore</span> <b>&darr;</b></span></p>
-          <h1 id="name" aria-label="Maleeha Kaikaus"><span class="first" aria-hidden="true">Maleeha</span><span class="last" aria-hidden="true">Kaikaus</span></h1>
-          <div class="hero-foot">
-            <div>
-              <p class="role"><span class="role-txt"></span><i class="caret"></i></p>
-              <p class="sub" data-i18n="hero_sub">Electrical and Computer Engineering &middot; University of Victoria &middot; Victoria, BC</p>
-            </div>
-            <div class="cta">
-              <a class="btn solid mag" href="#projects" data-i18n="cta_projects">See my projects &darr;</a>
-              <a class="btn ghost mag" href="#contact" data-i18n="cta_contact">Get in touch</a>
+    <main>
+      <section class="hero" id="home" data-tone="base">
+        <div class="hero-stage" id="stage">
+          <div class="hero-in">
+            <div class="wrap">
+              <p class="eyebrow">
+                <span data-i18n="hello">Hello, I am</span
+                ><span
+                  ><span data-i18n="scroll">Scroll to explore</span>
+                  <b>&darr;</b></span
+                >
+              </p>
+              <h1 id="name" aria-label="Maleeha Kaikaus">
+                <span class="first" aria-hidden="true">Maleeha</span
+                ><span class="last" aria-hidden="true">Kaikaus</span>
+              </h1>
+              <div class="hero-foot">
+                <div>
+                  <p class="role">
+                    <span class="role-txt"></span><i class="caret"></i>
+                  </p>
+                  <p class="sub" data-i18n="hero_sub">
+                    Electrical and Computer Engineering &middot; University of
+                    Victoria &middot; Victoria, BC
+                  </p>
+                </div>
+                <div class="cta">
+                  <a
+                    class="btn solid mag"
+                    href="#projects"
+                    data-i18n="cta_projects"
+                    >See my projects &darr;</a
+                  >
+                  <a
+                    class="btn ghost mag"
+                    href="#contact"
+                    data-i18n="cta_contact"
+                    >Get in touch</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-   <section class="state" id="intro" data-tone="base">
-    <div class="state-pin">
-      <div class="wrap">
-        <p id="stateP" data-i18n="state">I am a MASc student in <b>Electrical and Computer Engineering</b> at the University of Victoria. I am drawn to <b>privacy and security,</b> and I work across <b>hardware, software and machine learning.</b></p>
-      </div>
-    </div>
-  </section>
-
-    <section data-tone="base">
-    <div class="wrap stats">
-      <div class="rv"><strong><span class="count" data-n="2">2</span></strong><span data-i18n="stat_pubs">Peer-reviewed publications</span></div>
-      <div class="rv" style="--d:90ms"><strong><span class="count" data-n="18">18</span></strong><span data-i18n="stat_lab">Undergraduates in my weekly digital design labs</span></div>
-      <div class="rv" style="--d:180ms"><strong><span class="count" data-n="2028">2028</span></strong><span data-i18n="stat_masc">Expected MASc completion</span></div>
-    </div>
-  </section>
-
-  <section class="hs" id="projects" data-tone="inv">
-    <div class="hs-pin">
-      <h2 class="kin" data-dir="1" data-i18n="k_projects">Selected <i>projects</i></h2>
-      <div class="hs-view" id="hsView">
-        <div class="hs-track" id="hsTrack">
-          <article class="proj tilt">
-            <span class="num">01</span><h3>SEAsk</h3>
-            <p data-i18n="p1">Ocean Hackathon Victoria, October 2026. A team prototype that turns live ferry ocean-sensor data into a passenger kiosk and a crew dashboard for BC Ferries. I wrote the project description and built the pitch deck.</p>
-            <div class="chips"><i>Hackathon</i><i>Sensor data</i><i>BC Ferries</i></div>
-            <div class="plinks"><a href="https://github.com/pepkh/SEAsk" data-i18n="team_repo">Team repo</a></div>
-          </article>
-          <article class="proj tilt">
-            <span class="num">02</span><h3>Door-to-Door</h3>
-            <p data-i18n="p2">A database-driven web application that helps a utility services business manage service requests by area.</p>
-            <div class="chips"><i>Relational database</i><i>Web app</i></div>
-            <div class="plinks"><a href="https://github.com/mkaikaus/Door-to-door" data-i18n="source">Source</a><a href="media/Door%20to%20door.webm" data-i18n="demo">Demo</a></div>
-          </article>
-          <article class="proj tilt">
-            <span class="num">03</span><h3>CS-Wiki</h3>
-            <p data-i18n="p3">A web platform that streamlines computer science research by organizing academic resources in one place.</p>
-            <div class="chips"><i>Web platform</i><i>Research tools</i></div>
-            <div class="plinks"><a href="https://github.com/mkaikaus/Project-3.1" data-i18n="team_repo">Team repo</a></div>
-          </article>
-          <article class="proj tilt">
-            <span class="num">04</span><h3>Seizure Detection</h3>
-            <p data-i18n="p4">A Python project that detects seizures from EEG data, an early step toward my published research.</p>
-            <div class="chips"><i>Python</i><i>EEG</i></div>
-            <div class="plinks"><a href="https://github.com/mkaikaus/SeizureDetection" data-i18n="source">Source</a></div>
-          </article>
-          <article class="proj more">
-            <span class="num">05</span><h3 data-i18n="earlier_h">Earlier web demos</h3>
-            <p data-i18n="earlier_p">Where I started with front-end work.</p>
-            <ul>
-              <li><a href="media/ART.webm">Art Gallery <span>&nearr;</span></a></li>
-              <li><a href="media/Technophile.webm">Technophile <span>&nearr;</span></a></li>
-              <li><a href="https://github.com/mkaikaus/1st_site">Single Page Projects <span>&nearr;</span></a></li>
-            </ul>
-          </article>
+      <section class="state" id="intro" data-tone="base">
+        <div class="state-pin">
+          <div class="wrap">
+            <p id="stateP" data-i18n="state">
+              I am a MASc student in
+              <b>Electrical and Computer Engineering</b> at the University of
+              Victoria. I am drawn to <b>privacy and security,</b> and I work
+              across <b>hardware, software and machine learning.</b>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="wrap hs-foot" aria-hidden="true"><span><b id="hsNum">01</b> / <span id="hsTotal">05</span></span><div class="hs-bar"><i id="hsBar"></i></div><span data-i18n="hs_tip">Keep scrolling</span></div>
-    </div>
-  </section>
+      </section>
 
+      <section data-tone="base">
+        <div class="wrap stats">
+          <div class="rv">
+            <strong><span class="count" data-n="2">2</span></strong
+            ><span data-i18n="stat_pubs">Peer-reviewed publications</span>
+          </div>
+          <div class="rv" style="--d: 90ms">
+            <strong><span class="count" data-n="18">18</span></strong
+            ><span data-i18n="stat_lab"
+              >Undergraduates in my weekly digital design labs</span
+            >
+          </div>
+          <div class="rv" style="--d: 180ms">
+            <strong><span class="count" data-n="2028">2028</span></strong
+            ><span data-i18n="stat_masc">Expected MASc completion</span>
+          </div>
+        </div>
+      </section>
 
-</main>
+      <section class="hs" id="projects" data-tone="inv">
+        <div class="hs-pin">
+          <h2 class="kin" data-dir="1" data-i18n="k_projects">
+            Selected <i>projects</i>
+          </h2>
+          <div class="hs-view" id="hsView">
+            <div class="hs-track" id="hsTrack">
+              <article class="proj tilt">
+                <span class="num">01</span>
+                <h3>SEAsk</h3>
+                <p data-i18n="p1">
+                  Ocean Hackathon Victoria, October 2026. A team prototype that
+                  turns live ferry ocean-sensor data into a passenger kiosk and
+                  a crew dashboard for BC Ferries. I wrote the project
+                  description and built the pitch deck.
+                </p>
+                <div class="chips">
+                  <i>Hackathon</i><i>Sensor data</i><i>BC Ferries</i>
+                </div>
+                <div class="plinks">
+                  <a href="https://github.com/pepkh/SEAsk" data-i18n="team_repo"
+                    >Team repo</a
+                  >
+                </div>
+              </article>
+              <article class="proj tilt">
+                <span class="num">02</span>
+                <h3>Door-to-Door</h3>
+                <p data-i18n="p2">
+                  A database-driven web application that helps a utility
+                  services business manage service requests by area.
+                </p>
+                <div class="chips">
+                  <i>Relational database</i><i>Web app</i>
+                </div>
+                <div class="plinks">
+                  <a
+                    href="https://github.com/mkaikaus/Door-to-door"
+                    data-i18n="source"
+                    >Source</a
+                  ><a href="media/Door%20to%20door.webm" data-i18n="demo"
+                    >Demo</a
+                  >
+                </div>
+              </article>
+              <article class="proj tilt">
+                <span class="num">03</span>
+                <h3>CS-Wiki</h3>
+                <p data-i18n="p3">
+                  A web platform that streamlines computer science research by
+                  organizing academic resources in one place.
+                </p>
+                <div class="chips">
+                  <i>Web platform</i><i>Research tools</i>
+                </div>
+                <div class="plinks">
+                  <a
+                    href="https://github.com/mkaikaus/Project-3.1"
+                    data-i18n="team_repo"
+                    >Team repo</a
+                  >
+                </div>
+              </article>
+              <article class="proj tilt">
+                <span class="num">04</span>
+                <h3>Seizure Detection</h3>
+                <p data-i18n="p4">
+                  A Python project that detects seizures from EEG data, an early
+                  step toward my published research.
+                </p>
+                <div class="chips"><i>Python</i><i>EEG</i></div>
+                <div class="plinks">
+                  <a
+                    href="https://github.com/mkaikaus/SeizureDetection"
+                    data-i18n="source"
+                    >Source</a
+                  >
+                </div>
+              </article>
+              <article class="proj more">
+                <span class="num">05</span>
+                <h3 data-i18n="earlier_h">Earlier web demos</h3>
+                <p data-i18n="earlier_p">
+                  Where I started with front-end work.
+                </p>
+                <ul>
+                  <li>
+                    <a href="media/ART.webm"
+                      >Art Gallery <span>&nearr;</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="media/Technophile.webm"
+                      >Technophile <span>&nearr;</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://github.com/mkaikaus/1st_site"
+                      >Single Page Projects <span>&nearr;</span></a
+                    >
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <div class="wrap hs-foot" aria-hidden="true">
+            <span><b id="hsNum">01</b> / <span id="hsTotal">05</span></span>
+            <div class="hs-bar"><i id="hsBar"></i></div>
+            <span data-i18n="hs_tip">Keep scrolling</span>
+          </div>
+        </div>
+      </section>
 
+      <section class="sec" id="experience" data-tone="base">
+        <h2 class="kin" data-dir="-1" data-i18n="k_exp">Experience</h2>
+        <div class="wrap xp" id="xp">
+          <div class="par" data-speed=".1">
+            <article class="xcard rv">
+              <span class="big" aria-hidden="true">01</span>
+              <time data-i18n="t1_time">Sept 2026 &ndash; Present</time>
+              <h3 data-i18n="t1_h">
+                Laboratory Instructor, Digital Design (ECE 241)
+              </h3>
+              <p class="org">University of Victoria &middot; Victoria, BC</p>
+              <ul>
+                <li data-i18n="t1_a">
+                  Lead two weekly labs for 18 undergraduates on sequential and
+                  combinational logic, FPGAs and VHDL.
+                </li>
+                <li data-i18n="t1_b">
+                  Guide students through hardware and simulation exercises,
+                  debugging circuits and design errors one-on-one.
+                </li>
+                <li data-i18n="t1_c">
+                  Explain technical concepts clearly to students with different
+                  levels of background knowledge.
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="par" data-speed="-.12">
+            <article class="xcard rv" style="--d: 120ms">
+              <span class="big" aria-hidden="true">02</span>
+              <time data-i18n="t2_time">Mar 2024 &ndash; Nov 2024</time>
+              <h3 data-i18n="t2_h">Software Engineer</h3>
+              <p class="org">Intercloud Limited &middot; Dhaka, Bangladesh</p>
+              <ul>
+                <li data-i18n="t2_a">
+                  Developed responsive web applications with React.js, Next.js,
+                  JavaScript and TypeScript, connecting frontend interfaces to
+                  backend REST APIs.
+                </li>
+                <li data-i18n="t2_b">
+                  Contributed to the Brilliant Cloud Portal, a production
+                  platform for managing user access, cloud services and
+                  administrative operations.
+                </li>
+                <li data-i18n="t2_c">
+                  Automated end-to-end testing with Cypress, writing around 20
+                  test cases per feature to improve software quality and reduce
+                  regressions.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="also rv">
+            <div class="tabs" role="tablist">
+              <button
+                type="button"
+                class="tab on"
+                role="tab"
+                id="tabVol"
+                aria-selected="true"
+                aria-controls="panelVol"
+                data-i18n="tab_vol"
+              >
+                Volunteering
+              </button>
+              <button
+                type="button"
+                class="tab"
+                role="tab"
+                id="tabWork"
+                aria-selected="false"
+                aria-controls="panelWork"
+                tabindex="-1"
+                data-i18n="tab_work"
+              >
+                Other work
+              </button>
+            </div>
+            <div
+              class="panel"
+              role="tabpanel"
+              id="panelVol"
+              aria-labelledby="tabVol"
+            >
+              <ul class="jobs">
+                <li class="job">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="vd1"
+                  >
+                    <span class="jy" data-i18n="v1_y">2025 &ndash; now</span
+                    ><span class="jn">Oak Bay Volunteer Services</span
+                    ><span class="jr" data-i18n="v1_r"
+                      >Technology Support Volunteer</span
+                    ><span class="jx" aria-hidden="true"></span>
+                  </button>
+                  <div class="jd" id="vd1">
+                    <div>
+                      <p data-i18n="v1_d">
+                        I help community members, mostly seniors, solve everyday
+                        tech problems, explaining things patiently and in plain
+                        language.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="job">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="vd2"
+                  >
+                    <span class="jy">2023</span
+                    ><span class="jn">DiversAsia Conference</span
+                    ><span class="jr" data-i18n="v2_r"
+                      >Conference Volunteer</span
+                    ><span class="jx" aria-hidden="true"></span>
+                  </button>
+                  <div class="jd" id="vd2">
+                    <div>
+                      <p data-i18n="v2_d">
+                        Welcomed and guided attendees at a fast-paced
+                        international conference and answered their questions.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="job">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="vd3"
+                  >
+                    <span class="jy">2022</span
+                    ><span class="jn">IEEE Computer Society</span
+                    ><span class="jr" data-i18n="v3_r"
+                      >Vice-Chair &middot; Jahangirnagar University</span
+                    ><span class="jx" aria-hidden="true"></span>
+                  </button>
+                  <div class="jd" id="vd3">
+                    <div>
+                      <p data-i18n="v3_d">
+                        Coordinated events and schedules for a student tech
+                        community, keeping plans organized and teams on the same
+                        page.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="panel"
+              role="tabpanel"
+              id="panelWork"
+              aria-labelledby="tabWork"
+              hidden
+            >
+              <ul class="jobs">
+                <li class="job">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="jd1"
+                  >
+                    <span class="jy" data-i18n="j1_y"
+                      >Sept 2026 &ndash; now</span
+                    ><span class="jn">Best Buy Canada</span
+                    ><span class="jr" data-i18n="j1_r"
+                      >Product Process Associate</span
+                    ><span class="jx" aria-hidden="true"></span>
+                  </button>
+                  <div class="jd" id="jd1">
+                    <div>
+                      <p data-i18n="j1_d">
+                        Assisting with inventory control and basic loss
+                        prevention.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="job">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="jd2"
+                  >
+                    <span class="jy" data-i18n="j2_y"
+                      >Sept 2025 &ndash; Aug 2026</span
+                    ><span class="jn"
+                      >Walmart
+                      <i class="star" aria-hidden="true">&#9733;</i></span
+                    ><span class="jr" data-i18n="j2_r"
+                      >Omni Customer Fulfillment Associate</span
+                    ><span class="jx" aria-hidden="true"></span>
+                  </button>
+                  <div class="jd" id="jd2">
+                    <div>
+                      <p data-i18n="j2_d">
+                        Fulfilled around 400 online and in-store orders a day
+                        using digital inventory and order systems. Named Shining
+                        Star of the Month in March 2026, chosen from about 500
+                        store associates.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="job">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="jd3"
+                  >
+                    <span class="jy" data-i18n="j3_y"
+                      >Jan 2025 &ndash; Aug 2025</span
+                    ><span class="jn">Value Village</span
+                    ><span class="jr" data-i18n="j3_r"
+                      >Customer Service Associate</span
+                    ><span class="jx" aria-hidden="true"></span>
+                  </button>
+                  <div class="jd" id="jd3">
+                    <div>
+                      <p data-i18n="j3_d">
+                        Priced up to 1,400 books and media in a single day with
+                        close attention to detail and accuracy.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- three.js (vendor/three.min.js) is loaded by js/main.js after the first paint -->
-<script src="vendor/lenis.min.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/scene.js"></script>
-<script src="js/main.js"></script>
-</body>
-
+    <!-- three.js (vendor/three.min.js) is loaded by js/main.js after the first paint -->
+    <script src="vendor/lenis.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
